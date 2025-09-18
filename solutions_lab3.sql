@@ -92,3 +92,11 @@ HAVING AVG(length) > 120
 ORDER BY mean_duration_minutes DESC;
 
 /* 3. Last names that are NOT repeated in actor table */
+-- Challenge 2 - 3 Bonus
+SELECT 
+  last_name
+FROM actor
+GROUP BY last_name
+HAVING COUNT(*) = 1
+ORDER BY last_name;
+
